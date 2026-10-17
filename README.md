@@ -7,7 +7,7 @@ My work is **offline replay auditing**: take a recorded protocol session (A2A ta
 ## 🏆 Highlights
 
 - ✅ **4 plugins in the official [Hermes Agent plugin catalog](https://github.com/NousResearch/hermes-agent/tree/main/plugin-catalog)** — [agent-ledger](https://github.com/ZidoCode/agent-ledger), [context-audit](https://github.com/ZidoCode/context-audit), [agent-janitor](https://github.com/ZidoCode/agent-janitor), and [skill-integrity](https://github.com/ZidoCode/skill-integrity)
-- 📦 **5 packages live on [PyPI](https://pypi.org/user/zidocode/)** — `a2a-doctor`, `mcpmedic`, `mcp-session-audit`, `mcp-schema-audit`, `a2a-doctor` is one `pip install` away from auditing any recorded A2A or MCP session
+- 📦 **5 packages live on [PyPI](https://pypi.org/user/zidocode/)** — `a2a-doctor` and `mcpmedic` put every A2A and MCP audit one `pip install` away
 - 🧪 **~320 tests** across every repo, each with CI, fresh-clone verified before every push
 
 ## 🤖 The A2A Suite
