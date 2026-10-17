@@ -6,7 +6,7 @@ My work is **offline replay auditing**: take a recorded protocol session (A2A ta
 
 ## 🏆 Highlights
 
-- ✅ **2 plugins in the official [Hermes Agent plugin catalog](https://github.com/NousResearch/hermes-agent/tree/main/plugin-catalog)** — [agent-ledger](https://github.com/ZidoCode/agent-ledger) (write-ahead ledger + OWASP Agentic Top 10 posture scoring) and [context-audit](https://github.com/ZidoCode/context-audit) (context-window forensics)
+- ✅ **4 plugins in the official [Hermes Agent plugin catalog](https://github.com/NousResearch/hermes-agent/tree/main/plugin-catalog)** — [agent-ledger](https://github.com/ZidoCode/agent-ledger), [context-audit](https://github.com/ZidoCode/context-audit), [agent-janitor](https://github.com/ZidoCode/agent-janitor), and [skill-integrity](https://github.com/ZidoCode/skill-integrity)
 - 📦 **5 packages live on [PyPI](https://pypi.org/user/zidocode/)** — `a2a-doctor`, `mcpmedic`, `mcp-session-audit`, `mcp-schema-audit`, `a2a-doctor` is one `pip install` away from auditing any recorded A2A or MCP session
 - 🧪 **~320 tests** across every repo, each with CI, fresh-clone verified before every push
 
@@ -53,10 +53,12 @@ mcp-doctor check recording.jsonl     # session + schema, one pass
 
 ## 🧩 Hermes Agent Plugins
 
-Both reviewed and merged into the official [plugin catalog](https://github.com/NousResearch/hermes-agent/tree/main/plugin-catalog) at [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent):
+All four reviewed and merged into the official [plugin catalog](https://github.com/NousResearch/hermes-agent/tree/main/plugin-catalog) at [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent):
 
 - [agent-ledger](https://github.com/ZidoCode/agent-ledger) · [catalog entry](https://github.com/NousResearch/hermes-agent/blob/main/plugin-catalog/agent-ledger.yaml) — write-ahead ledger for agent side effects; **Agent Posture scoring against the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)** (ASI02/05/08/10/11) from ledger metadata only; 51-test validation suite
-- [context-audit](https://github.com/ZidoCode/context-audit) · [catalog entry](https://github.com/NousResearch/hermes-agent/blob/main/plugin-catalog/context-audit.yaml) — per-turn token estimates, flags the largest tool output of every turn, detects compaction events; metadata only, never args or results
+- [context-audit](https://github.com/ZidoCode/context-audit) · [catalog entry](https://github.com/NousResearch/hermes-agent/blob/main/plugin-catalog/context-audit.yaml) — context-window forensics: per-turn token estimates, flags the largest tool output of every turn, detects compaction events; metadata only, never args or results
+- [agent-janitor](https://github.com/ZidoCode/agent-janitor) · [catalog entry](https://github.com/NousResearch/hermes-agent/blob/main/plugin-catalog/agent-janitor.yaml) — process hygiene: finds the dev servers, tunnels, watchers, and nohup jobs your agent left behind, with evidence signals (ppid=1 reparent, `/proc/net/tcp` listeners, TTL exceeded)
+- [skill-integrity](https://github.com/ZidoCode/skill-integrity) · [catalog entry](https://github.com/NousResearch/hermes-agent/blob/main/plugin-catalog/skill-integrity.yaml) — catches corrupted and stale agent skills before they silently mislead your agent
 
 ## 🧰 Tooling
 
